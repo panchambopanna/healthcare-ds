@@ -11,7 +11,7 @@ const Home = () => {
         <div className="Home__bar">
           <Card user="Doctor" />
           <Card user="Patient" />
-          <Card user="Pharma" />
+          <Card user="Pharmacist" />
         </div>
       </div>
     </div>

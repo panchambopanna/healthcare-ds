@@ -16,7 +16,7 @@ const Card = ({ user }) => {
   useEffect(() => {
     if (user === "Doctor") setusericon(faUserDoctor);
     else if (user === "Patient") setusericon(faHospitalUser);
-    else if (user === "Pharma") setusericon(faPills);
+    else if (user === "Pharmacist") setusericon(faPills);
   }, [user]);
   const navigate = useNavigate();
   const dispatch = useDispatch();

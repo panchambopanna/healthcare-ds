@@ -1,0 +1,23 @@
+[
+    {
+        "id":1,
+        "name": "Dr. Parmeshwar Kumar",
+        "dp":"https://static.vecteezy.com/system/resources/previews/004/439/693/original/avatar-doodle-profile-cartoon-character-vector.jpg",
+        "department": "Cardiology",
+        "license": "G123KH123"
+    },
+    {
+        "id":2,
+        "name": "Dr. Manali Singh",
+        "dp":"https://static.vecteezy.com/system/resources/previews/004/439/684/non_2x/avatar-doodle-profile-girl-character-drawing-vector.jpg",
+        "department": "Neurology",
+        "license": "C121MJ111"
+    },
+    {
+        "id":3,
+        "name": "Dr. Dharma Singh",
+        "dp":"https://static.vecteezy.com/system/resources/previews/004/439/693/original/avatar-doodle-profile-cartoon-character-vector.jpg",
+        "department": "Psychology",
+        "license": "Z1418ZH786"
+    }
+]

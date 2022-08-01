@@ -1,12 +1,18 @@
-import React from 'react'
-import {Outlet, Navigate} from 'react-router-dom'
+import {React} from 'react'
+import {Outlet, Navigate, useLocation} from 'react-router-dom';
+import { useSelector } from 'react-redux/es/exports';
+
+
 
 const ProtectedRoutes = () => {
-    let auth = localStorage.getItem('auth') //update this to be fetched from redux store
+
+  const isAuth = useSelector(state=>state.auth.isAuth)
+  const location = useLocation();
+    
   return (
-    (auth==='true')?<Outlet/>:<Navigate to='/' />
+    isAuth?<Outlet/>:<Navigate to='/' state = {{from: location}} replace/>
         
   )
 }
 
-export default ProtectedRoutes
+export default ProtectedRoutes;

@@ -8,7 +8,7 @@ const router = (
     <Routes>
         <Route exact path='/' element={<Home/>} />        
         <Route element = {<ProtectedRoutes/>}>
-            <Route  path='/dashboard' element={<Dashboard/>}/>
+            <Route  path='/dashboard' element={<Dashboard/>} />
         </Route>
 
     </Routes>)

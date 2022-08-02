@@ -2,6 +2,7 @@ import React from "react";
 import doctordb from "../db/doctor.json";
 import patientdb from "../db/patient.json";
 import { useSelector } from "react-redux/es/exports";
+import { Doctor } from "../components";
 
 const Dashboard = () => {
   const user = useSelector((state) => state.user.userType);
@@ -15,7 +16,9 @@ const Dashboard = () => {
             <i>{doctordb[0].department}</i>
           </small>
         </aside>
-        <main>This is main content</main>
+        <main>
+          <Doctor />
+        </main>
       </div>
     );
   else if (user === "Patient")

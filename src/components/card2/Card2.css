@@ -1,0 +1,14 @@
+.Card2 {
+  border: 1px solid rgb(219, 219, 219);
+  margin: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 2px 2px 5px rgb(219, 219, 219);
+}
+.Card2__date {
+  text-decoration: underline;
+  color: rgb(130, 130, 130);
+}
+.Card2__pres {
+  font-style: italic;
+}

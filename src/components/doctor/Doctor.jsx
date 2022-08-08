@@ -2,7 +2,6 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "./Doctor.css";
-import { computeHeadingLevel } from "@testing-library/react";
 
 const Doctor = () => {
   const callForm = () => {

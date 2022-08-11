@@ -1,30 +1,32 @@
-.Card{
-    border: 1px solid rgb(219, 219, 219);
-    border-radius: 15px;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    width: 15rem;
-    height: 20rem;
-    transition-duration: 300ms;
+.Card {
+  border: 1px solid #fff;
+  border-radius: 0.5em;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 15rem;
+  height: 20rem;
+  transition-duration: 300ms;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #fff;
 }
 
-.Card>svg{
-    color: var(--primary)
+.Card > svg {
+  color: var(--primary);
 }
 
-.Card:hover{
-    box-shadow: 2px 2px 5px rgb(172, 172, 172);
+.Card:hover {
+  box-shadow: 2px 2px 5px rgb(172, 172, 172);
+  box-shadow: 2px 2px 6px #c5c5c5, -2px -2px 6px #fff;
 }
 
-.Card__login{
-    background-color: var(--primary);
-    color: #fff;
-    border-radius: 5px;
-    border: 1px solid var(--primary);
-    padding: 5px 10px;
-    cursor: pointer;
+.Card__login {
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid var(--primary);
+  padding: 5px 10px;
+  cursor: pointer;
 }

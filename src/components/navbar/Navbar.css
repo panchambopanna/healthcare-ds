@@ -1,32 +1,32 @@
-.Navbar{
-    background-color: var(--primary);
-    display: flex;
-    justify-content: space-between;
-    padding:0.5rem;
+.Navbar {
+  background-color: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
 }
 
-img{
-    object-fit: contain;
-    width: 10rem;
-    height: 3rem;
+img {
+  object-fit: contain;
+  width: 10rem;
+  height: 3rem;
 }
 
-.loggedIn{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 7rem;
+.loggedIn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 7rem;
 }
 
-.profile{
-    cursor: pointer;
+.profile {
+  cursor: pointer;
 }
 
-#logoutBtn{
-    color: var(--primary);
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid var(--primary);
-    padding: 5px;
-    cursor: pointer;
+#logoutBtn {
+  color: var(--primary);
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid var(--primary);
+  padding: 5px;
+  cursor: pointer;
 }

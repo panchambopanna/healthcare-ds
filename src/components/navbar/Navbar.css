@@ -5,24 +5,24 @@
   padding: 0.5rem;
 }
 
-img {
+.Navbar img {
   object-fit: contain;
   width: 10rem;
   height: 3rem;
 }
 
-.loggedIn {
+.Navbar .loggedIn {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 7rem;
 }
 
-.profile {
+.Navbar .profile {
   cursor: pointer;
 }
 
-#logoutBtn {
+.Navbar #logoutBtn {
   color: var(--primary);
   background-color: #fff;
   border-radius: 5px;

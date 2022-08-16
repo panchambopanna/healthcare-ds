@@ -1,0 +1,11 @@
+.Aside img{
+    width: 12vw;
+    height: 12vw;
+    border-radius: 50%;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #fff;
+    object-position: center;
+}
+
+.Aside h3{
+    margin: 2px;
+}

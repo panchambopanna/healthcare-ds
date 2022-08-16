@@ -1,17 +1,23 @@
 import React from "react";
-import patientdb from "../db/patient.json";
+import pDb from "../db/patient.json";
+import dDb from "../db/doctor.json";
 import { useSelector } from "react-redux/es/exports";
 import { Doctor, Patient, Aside, Pharma } from "../components";
-import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   const user = useSelector((state) => state.user.userType);
+  let di = 1;
+  let pi = 1;
 
   if (user === "Doctor")
     return (
       <div className="Dashboard">
         <aside>
-          <Aside />
+          <Aside
+            prof={dDb[di].dp}
+            name={dDb[di].name}
+            dept={dDb[di].department}
+          />
         </aside>
         <main>
           <Doctor />
@@ -22,7 +28,12 @@ const Dashboard = () => {
     return (
       <div className="Dashboard">
         <aside>
-          <Aside />
+          <Aside
+            prof={pDb[pi].dp}
+            name={pDb[pi].name}
+            city={pDb[pi].city}
+            address={pDb[pi].address}
+          />
         </aside>
         <main>
           <Patient />

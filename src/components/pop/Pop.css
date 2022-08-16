@@ -1,0 +1,46 @@
+.Pop{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.473);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Pop__main{
+    width: 60vw;
+    height: 70vh;
+    background-color: white;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.Pop__main::-webkit-scrollbar-track{
+    width: 5px;
+}
+
+.Pop__main form{
+    width: 90%;
+    margin: auto;
+}
+
+.fItem{
+    margin-top: 5px;
+}
+
+
+.fItem input:not([type="checkbox"]):not([type="radio"]), textarea{
+    width: 100%;
+    border: 1px solid #c5c5c5
+}
+
+
+

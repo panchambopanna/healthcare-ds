@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Pop.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClose } from "@fortawesome/free-solid-svg-icons";
 
 const Pop = ({ setInfo }) => {
   const [inputValue, setInputValue] = useState({
@@ -10,7 +12,7 @@ const Pop = ({ setInfo }) => {
     phone: "",
     email: "",
     symp: { cough: false, cold: false, stomachache: false, headache: false },
-    pres: "",
+    pres: ""
   });
   console.log(inputValue);
   const handleSubmit = (e) => {
@@ -27,6 +29,15 @@ const Pop = ({ setInfo }) => {
     <div className="Pop">
       <div className="Pop__main">
         <h2>Add Patient</h2>
+        <span
+          title="Close"
+          className="close"
+          onClick={() => {
+            setInfo(false);
+          }}
+        >
+          <FontAwesomeIcon icon={faClose} />
+        </span>
         <form action="" onSubmit={handleSubmit}>
           <div className="fItem">
             <label htmlFor="pName">Name</label>
@@ -35,6 +46,7 @@ const Pop = ({ setInfo }) => {
               type="text"
               name="pName"
               id="pName"
+              placeholder="Enter patient's full name"
               value={inputValue.name}
               onChange={(e) =>
                 setInputValue({ ...inputValue, name: e.target.value })
@@ -81,6 +93,7 @@ const Pop = ({ setInfo }) => {
               type="number"
               name="pAge"
               id="pAge"
+              placeholder="Enter patient's age in years"
               value={inputValue.age}
               onChange={(e) =>
                 setInputValue({ ...inputValue, age: e.target.value })
@@ -88,12 +101,13 @@ const Pop = ({ setInfo }) => {
             />
           </div>
           <div className="fItem">
-            <label htmlFor="pPh">Phone Number</label>
+            <label htmlFor="pPh">Telephone</label>
             <br />
             <input
               type="telephone"
               name="pPh"
               id="pPh"
+              placeholder="Enter patient's phone number"
               value={inputValue.phone}
               onChange={(e) =>
                 setInputValue({ ...inputValue, phone: e.target.value })
@@ -107,6 +121,7 @@ const Pop = ({ setInfo }) => {
               type="email"
               name="pMail"
               id="pMail"
+              placeholder="Enter patient's email"
               value={inputValue.email}
               onChange={(e) =>
                 setInputValue({ ...inputValue, email: e.target.value })
@@ -114,7 +129,8 @@ const Pop = ({ setInfo }) => {
             />
           </div>
           <div className="fItem">
-            Symptoms <br />
+            <label>Symptoms</label>
+            <small>(Check the symptoms as reported by patient)</small> <br />
             <input
               type="checkbox"
               name="cough"
@@ -123,7 +139,7 @@ const Pop = ({ setInfo }) => {
               onChange={(e) =>
                 setInputValue({
                   ...inputValue,
-                  symp: { ...inputValue.symp, cough: e.target.checked },
+                  symp: { ...inputValue.symp, cough: e.target.checked }
                 })
               }
             />
@@ -137,7 +153,7 @@ const Pop = ({ setInfo }) => {
               onChange={(e) =>
                 setInputValue({
                   ...inputValue,
-                  symp: { ...inputValue.symp, cold: e.target.checked },
+                  symp: { ...inputValue.symp, cold: e.target.checked }
                 })
               }
             />
@@ -151,7 +167,7 @@ const Pop = ({ setInfo }) => {
               onChange={(e) =>
                 setInputValue({
                   ...inputValue,
-                  symp: { ...inputValue.symp, stomachache: e.target.checked },
+                  symp: { ...inputValue.symp, stomachache: e.target.checked }
                 })
               }
             />
@@ -165,7 +181,7 @@ const Pop = ({ setInfo }) => {
               onChange={(e) =>
                 setInputValue({
                   ...inputValue,
-                  symp: { ...inputValue.symp, headache: e.target.checked },
+                  symp: { ...inputValue.symp, headache: e.target.checked }
                 })
               }
             />
@@ -173,7 +189,7 @@ const Pop = ({ setInfo }) => {
             <br />
           </div>
           <div className="fItem">
-            Prescription
+            <label htmlFor="pres">Prescription</label>
             <br />
             <textarea
               name="pres"

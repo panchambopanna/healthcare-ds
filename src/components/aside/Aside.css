@@ -1,11 +1,23 @@
-.Aside img{
-    width: 12vw;
-    height: 12vw;
-    border-radius: 50%;
-    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #fff;
-    object-position: center;
+.Aside img {
+  width: 12vw;
+  height: 12vw;
+  border-radius: 50%;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #fff;
+  object-position: center;
 }
 
-.Aside h3{
-    margin: 2px;
+.Aside h3 {
+  margin: 2px;
+}
+
+@media screen and (max-width: 600px) {
+  .Aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .Aside img {
+    width: 17vw;
+    height: 17vw;
+  }
 }

@@ -3,6 +3,7 @@ import pDb from "../db/patient.json";
 import dDb from "../db/doctor.json";
 import { useSelector } from "react-redux/es/exports";
 import { Doctor, Patient, Aside, Pharma } from "../components";
+import './style.css';
 
 const Dashboard = () => {
   const user = useSelector((state) => state.user.userType);

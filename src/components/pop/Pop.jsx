@@ -14,7 +14,6 @@ const Pop = ({ setInfo }) => {
     symp: { cough: false, cold: false, stomachache: false, headache: false },
     pres: ""
   });
-  console.log(inputValue);
   const handleSubmit = (e) => {
     e.preventDefault();
     if (

@@ -65,7 +65,6 @@ textarea {
   border-radius: 0.5rem;
   cursor: pointer;
   border: 1px solid var(--primary);
-  box-shadow: 2px 2px 5px #a7a6a6;
   transition: all 0.4s ease;
 }
 .Pop__main form > button[type="submit"] {
@@ -76,7 +75,4 @@ textarea {
   background-color: #fff;
   color: var(--primary);
   margin-left: 5px;
-}
-.Pop__main form > button:hover {
-  box-shadow: 1px 1px 3px #c5c5c5;
 }

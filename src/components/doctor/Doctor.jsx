@@ -29,6 +29,7 @@ const Doctor = () => {
             <FontAwesomeIcon icon={faSearch} />
           </button>
         </div>
+        {/* when the search is clicked and values are fetched add something here */}
         {!info ? (
           <button id="addP" title="Add patient" onClick={() => addPatient()}>
             <FontAwesomeIcon icon={faUserPlus} size="4x" />

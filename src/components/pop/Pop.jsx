@@ -12,7 +12,7 @@ const Pop = ({ setInfo }) => {
     phone: "",
     email: "",
     symp: { cough: false, cold: false, stomachache: false, headache: false },
-    pres: ""
+    pres: "",
   });
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -128,6 +128,19 @@ const Pop = ({ setInfo }) => {
             />
           </div>
           <div className="fItem">
+            <label htmlFor="pVisit">Next visit</label>
+            <br />
+            <input
+              type="date"
+              name="pVisit"
+              id="pVisit"
+              value={inputValue.visitDt}
+              onChange={(e) =>
+                setInputValue({ ...inputValue, visitDt: e.target.value })
+              }
+            />
+          </div>
+          <div className="fItem">
             <label>Symptoms</label>
             <small>(Check the symptoms as reported by patient)</small> <br />
             <input
@@ -138,7 +151,7 @@ const Pop = ({ setInfo }) => {
               onChange={(e) =>
                 setInputValue({
                   ...inputValue,
-                  symp: { ...inputValue.symp, cough: e.target.checked }
+                  symp: { ...inputValue.symp, cough: e.target.checked },
                 })
               }
             />
@@ -152,7 +165,7 @@ const Pop = ({ setInfo }) => {
               onChange={(e) =>
                 setInputValue({
                   ...inputValue,
-                  symp: { ...inputValue.symp, cold: e.target.checked }
+                  symp: { ...inputValue.symp, cold: e.target.checked },
                 })
               }
             />
@@ -166,7 +179,7 @@ const Pop = ({ setInfo }) => {
               onChange={(e) =>
                 setInputValue({
                   ...inputValue,
-                  symp: { ...inputValue.symp, stomachache: e.target.checked }
+                  symp: { ...inputValue.symp, stomachache: e.target.checked },
                 })
               }
             />
@@ -180,7 +193,7 @@ const Pop = ({ setInfo }) => {
               onChange={(e) =>
                 setInputValue({
                   ...inputValue,
-                  symp: { ...inputValue.symp, headache: e.target.checked }
+                  symp: { ...inputValue.symp, headache: e.target.checked },
                 })
               }
             />

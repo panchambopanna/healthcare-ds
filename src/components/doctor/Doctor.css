@@ -24,12 +24,14 @@
 
 .Doctor__main-search input {
   border: none;
-  width: 30vw;
-  min-width: 70%;
+  width: 100%;
   padding: 8px;
 }
 .Doctor__main-search input:focus {
   outline: none;
+}
+.Doctor__main-search>input:focus ~ .Doctor__main-search {
+  border: 2px solid rgb(96, 75, 255);
 }
 
 .Doctor__main-search button {

@@ -2,28 +2,30 @@ import React, { useState } from "react";
 import "./Pop.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
+import { useSelector, useDispatch } from "react-redux";
+import { addPatient } from "../../redux/patientSlice";
 
 const Pop = ({ setInfo }) => {
+  const dispatch = useDispatch();
+  const patients = useSelector((state) => state.patient);
+
   const [inputValue, setInputValue] = useState({
+    id: "",
     name: "",
-    gender: "",
     dob: "",
     age: "",
-    phone: "",
-    email: "",
+    gender: "",
+    nationality: "",
     symp: { cough: false, cold: false, stomachache: false, headache: false },
-    pres: "",
   });
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (
-      window.confirm(
-        `Do you agree to the infor entered? ${JSON.stringify(inputValue)}`
-      )
-    ) {
-      setInfo(false);
-    }
+    inputValue.id = patients.patients.length + 1;
+    dispatch(addPatient(inputValue));
+    setInfo(false);
   };
+
   return (
     <div className="Pop">
       <div className="Pop__main">
@@ -39,13 +41,26 @@ const Pop = ({ setInfo }) => {
         </span>
         <form action="" onSubmit={handleSubmit}>
           <div className="fItem">
-            <label htmlFor="pName">Name</label>
+            <label htmlFor="pId">Patient Id: </label>
+            <input
+              type="number"
+              name="pId"
+              id="pId"
+              disabled
+              value={patients.patients.length + 1}
+            />
+          </div>
+          <div className="fItem">
+            <label htmlFor="pName">
+              <span className="req">*</span>Name
+            </label>
             <br />
             <input
               type="text"
               name="pName"
               id="pName"
               placeholder="Enter patient's full name"
+              required
               value={inputValue.name}
               onChange={(e) =>
                 setInputValue({ ...inputValue, name: e.target.value })
@@ -53,32 +68,15 @@ const Pop = ({ setInfo }) => {
             />
           </div>
           <div className="fItem">
-            <label htmlFor="pGen">Gender</label>
-            <br />
-            <input
-              type="radio"
-              name="pGen"
-              id="pMale"
-              value={inputValue.gender}
-              onChange={(e) => setInputValue({ ...inputValue, gender: "M" })}
-            />
-            <label htmlFor="pMale">Male</label>
-            <input
-              type="radio"
-              name="pGen"
-              id="pFemale"
-              value={inputValue.gender}
-              onChange={(e) => setInputValue({ ...inputValue, gender: "F" })}
-            />
-            <label htmlFor="pFemale">Female</label>
-          </div>
-          <div className="fItem">
-            <label htmlFor="pDob">Date of birth</label>
+            <label htmlFor="pDob">
+              <span className="req">*</span>Date of birth
+            </label>
             <br />
             <input
               type="date"
               name="pDob"
               id="pDob"
+              required
               value={inputValue.dob}
               onChange={(e) =>
                 setInputValue({ ...inputValue, dob: e.target.value })
@@ -100,49 +98,49 @@ const Pop = ({ setInfo }) => {
             />
           </div>
           <div className="fItem">
-            <label htmlFor="pPh">Telephone</label>
+            <label htmlFor="pGen">
+              <span className="req">*</span>Gender
+            </label>
             <br />
             <input
-              type="telephone"
-              name="pPh"
-              id="pPh"
-              placeholder="Enter patient's phone number"
-              value={inputValue.phone}
+              type="radio"
+              name="pGen"
+              id="pMale"
+              required
+              value={inputValue.gender}
+              onChange={(e) => setInputValue({ ...inputValue, gender: "Male" })}
+            />
+            <label htmlFor="pMale">Male</label>
+            <input
+              type="radio"
+              name="pGen"
+              id="pFemale"
+              required
+              value={inputValue.gender}
               onChange={(e) =>
-                setInputValue({ ...inputValue, phone: e.target.value })
+                setInputValue({ ...inputValue, gender: "Female" })
+              }
+            />
+            <label htmlFor="pFemale">Female</label>
+          </div>
+
+          <div className="fItem">
+            <label htmlFor="pNat">Nationality</label>
+            <br />
+            <input
+              type="text"
+              name="pNat"
+              id="pNat"
+              placeholder="Enter patient's nationality"
+              value={inputValue.nationality}
+              onChange={(e) =>
+                setInputValue({ ...inputValue, nationality: e.target.value })
               }
             />
           </div>
           <div className="fItem">
-            <label htmlFor="pMail">Email</label>
+            <label>Existing Ailments</label>
             <br />
-            <input
-              type="email"
-              name="pMail"
-              id="pMail"
-              placeholder="Enter patient's email"
-              value={inputValue.email}
-              onChange={(e) =>
-                setInputValue({ ...inputValue, email: e.target.value })
-              }
-            />
-          </div>
-          <div className="fItem">
-            <label htmlFor="pVisit">Next visit</label>
-            <br />
-            <input
-              type="date"
-              name="pVisit"
-              id="pVisit"
-              value={inputValue.visitDt}
-              onChange={(e) =>
-                setInputValue({ ...inputValue, visitDt: e.target.value })
-              }
-            />
-          </div>
-          <div className="fItem">
-            <label>Symptoms</label>
-            <small>(Check the symptoms as reported by patient)</small> <br />
             <input
               type="checkbox"
               name="cough"
@@ -199,21 +197,6 @@ const Pop = ({ setInfo }) => {
             />
             <label htmlFor="headache">Head Ache</label>
             <br />
-          </div>
-          <div className="fItem">
-            <label htmlFor="pres">Prescription</label>
-            <br />
-            <textarea
-              name="pres"
-              id="pres"
-              cols="30"
-              style={{ resize: "none" }}
-              rows="10"
-              value={inputValue.pres}
-              onChange={(e) =>
-                setInputValue({ ...inputValue, pres: e.target.value })
-              }
-            ></textarea>
           </div>
           <button type="submit">Submit</button>
           <button

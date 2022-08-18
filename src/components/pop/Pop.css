@@ -58,6 +58,11 @@ textarea {
   border: 1px solid #c5c5c5;
 }
 
+.fItem input:disabled{
+  background-color: white;
+  border:none !important;
+}
+
 .Pop__main form > button {
   padding: 7px;
   margin: 10px 0px;
@@ -75,4 +80,8 @@ textarea {
   background-color: #fff;
   color: var(--primary);
   margin-left: 5px;
+}
+
+.fItem .req{
+  color: red;
 }

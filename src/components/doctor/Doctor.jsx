@@ -15,7 +15,6 @@ const Doctor = () => {
     //Needs improvement
     console.log("fetch user");
     for (let i = 0; i < patients.length; i++) {
-      console.log(patients[i], sText, patients[i].id);
       if (patients[i].id == sText) {
         document.querySelector(".Doctor__main--pInfo").style.display = "block";
         return setPatient(patients[i]);
@@ -23,8 +22,8 @@ const Doctor = () => {
         document.querySelector(".Doctor__main--pInfo").style.display = "block";
         return setPatient(patients[i]);
       }
-      console.error("Unable to fetch user");
     }
+    console.error("Unable to fetch user");
   };
   const addPatient = () => {
     console.log("Adding patient");

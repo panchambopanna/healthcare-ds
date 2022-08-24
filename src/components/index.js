@@ -6,3 +6,4 @@ export { default as Doctor } from "./doctor/Doctor";
 export { default as Patient } from "./patient/Patient";
 export { default as Pharma } from "./pharma/Pharma";
 export { default as Pop } from "./pop/Pop";
+export { default as Nomatch } from "./nomatch/Nomatch";

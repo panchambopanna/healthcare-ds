@@ -26,7 +26,7 @@ const Card = ({ user, db }) => {
   //This is the call to Dashboard
   const callUser = (user) => {
     dispatch(login());
-    dispatch(setUser(user));
+    dispatch(setUser({user,id}));
     navigate(`/${user.toLowerCase()}?id=${id}`);
   };
 

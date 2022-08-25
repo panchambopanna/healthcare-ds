@@ -30,14 +30,15 @@
   padding: 5px 10px;
   cursor: pointer;
 }
-.Card__login:disabled{
+.Card__login:disabled {
   background-color: gray;
   border-color: gray;
   color: #fff;
-  cursor:not-allowed; 
+  cursor: not-allowed;
 }
 
-.Card>select{
-  margin:10px;
+.Card > select {
+  margin: 10px;
   border-radius: 0.5em;
+  width: 70%;
 }

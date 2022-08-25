@@ -1,15 +1,26 @@
 .Doctor {
-  width: 90%;
+  display: flex;
   margin: auto;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid rgb(212, 212, 212);
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 20vw;
 }
 
 .Doctor__main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 20px;
-  margin-top: 20px;
+  width: 100%;
+  margin: 20px auto;
 }
 
 .Doctor__main-search {
@@ -25,13 +36,9 @@
 .Doctor__main-search input {
   border: none;
   width: 100%;
-  padding: 8px;
 }
 .Doctor__main-search input:focus {
   outline: none;
-}
-.Doctor__main-search>input:focus ~ .Doctor__main-search {
-  border: 2px solid rgb(96, 75, 255);
 }
 
 .Doctor__main-search button {
@@ -39,36 +46,43 @@
   background-color: transparent;
   cursor: pointer;
 }
+.Doctor__main-pInfo {
+  position: relative;
+  width: 80%;
+  border: 1px solid #eeecec;
+  border-radius: 0.5em;
+  padding: 10px;
+  box-shadow: 6px 6px 12px #c5c5c5;
+}
+.Doctor__main-pInfo > .close {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  color: #c5c5c5;
+  cursor: pointer;
+}
 
 .Doctor__main #addP {
-  background-color: transparent;
-  border: none;
+  width: 50px;
   border-radius: 50%;
-  color: var(--primary);
-  padding: 2rem;
-  cursor: pointer;
-  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #fff;
-  transition: all 0.1s ease-in;
-}
-
-.Doctor__main #addP:hover {
+  padding: 10px;
+  color: white;
   background-color: var(--primary);
-  color: #fff;
-  box-shadow: 2px 2px 6px #c5c5c5, -2px -2px 6px #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+.Doctor__main #addP:hover {
+  box-shadow: 6px 6px 12px #c5c5c5;
 }
 
-.Doctor__main--pInfo{
-  display: none;
-  width:90%;
-  border-bottom: 1px solid #c5c5c5;
-  padding-bottom: 20px;
-}
-
-.Doctor__main--card>.card{
-  border: 1px solid #c5c5c5;
-    padding: 10px;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    background: var(--primary);
-    color: white;
+@media screen and (max-width: 600px) {
+  .Doctor {
+    flex-direction: column;
+  }
+  aside {
+    width: 100%;
+    height: 100%;
+    border-right: none;
+    box-shadow: 2px 2px 5px #c5c5c5;
+  }
 }

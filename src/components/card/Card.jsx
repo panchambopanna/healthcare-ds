@@ -26,7 +26,7 @@ const Card = ({ user, db }) => {
   //This is the call to Dashboard
   const callUser = (user) => {
     dispatch(login());
-    dispatch(setUser({user,id}));
+    dispatch(setUser({ user, id }));
     navigate(`/${user.toLowerCase()}?id=${id}`);
   };
 
@@ -37,7 +37,6 @@ const Card = ({ user, db }) => {
       <select
         onChange={(e) => {
           setid(e.target.options.selectedIndex);
-          console.log(id);
         }}
       >
         <option></option>

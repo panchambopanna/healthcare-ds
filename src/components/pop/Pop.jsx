@@ -5,7 +5,7 @@ import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { useSelector, useDispatch } from "react-redux";
 import { addPatient } from "../../redux/patientSlice";
 
-const Pop = ({ setInfo }) => {
+const Pop = ({ setInfo, fn }) => {
   const dispatch = useDispatch();
   const patients = useSelector((state) => state.patient);
 
@@ -17,6 +17,7 @@ const Pop = ({ setInfo }) => {
     gender: "",
     nationality: "",
     symp: { cough: false, cold: false, stomachache: false, headache: false },
+    pres: [],
   });
 
   const handleSubmit = (e) => {
@@ -24,6 +25,7 @@ const Pop = ({ setInfo }) => {
     inputValue.id = patients.patients.length + 1;
     dispatch(addPatient(inputValue));
     setInfo(false);
+    fn();
   };
 
   return (

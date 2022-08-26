@@ -75,6 +75,66 @@ aside {
   box-shadow: 6px 6px 12px #c5c5c5;
 }
 
+.Doctor__history--card{
+  border: 1px solid #eeecec;
+  border-radius: 0.5em;
+  margin-top: 10px;
+  padding: 10px;
+  box-shadow: 2px 2px 6px #c5c5c5;
+  cursor: pointer;
+}
+
+.Doctor__history--card>.detail{
+  display:none;
+}
+
+.Doctor__history--card .arrow{
+  margin-right: 5px;
+  color: var(--primary);
+  translate: rotate(0deg);
+}
+
+.formAddPres{
+  margin-top:10px;
+}
+
+#addPres{
+  border-radius: 0.5em;
+  padding: 5px;
+  color: white;
+  background-color: var(--primary);
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+#addPres:disabled{
+  background-color:#c5c5c5;
+  color: white;
+}
+form.addPresPop{
+  display: none;
+  padding: 10px;
+}
+form.addPresPop>textarea{
+  resize: none;
+}
+form.addPresPop>input{
+  border: 1px solid #c5c5c5;
+  border-radius: 0.5em;
+  padding: 2px; 
+}
+form.addPresPop>label{
+  font-size: small;
+}
+form.addPresPop>button{
+  border-radius: 0.5em;
+  padding: 5px;
+  color: white;
+  background-color: var(--primary);
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  margin-right: 5px;
+}
+
 @media screen and (max-width: 600px) {
   .Doctor {
     flex-direction: column;

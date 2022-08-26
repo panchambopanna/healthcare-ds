@@ -8,19 +8,19 @@ const initialState = {
           dob: "1978-01-18",
           age: 44,
           gender: "Male",
-        nationality: "Indian",
-symp: { cough: false, cold: false, stomachache: false, headache: false },
+          nationality: "Indian",
+          symp: { cough: false, cold: false, stomachache: false, headache: false },
           pres: [
             {
               txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-              visitDt: "2022-01-02"
+              visitDt: "Sun Jan 02 2022"
             },
             {
                 txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                visitDt: "2022-07-01"
+                visitDt: "Fri Jul 01 2022"
             }
           ],
-          nVisit: "2022-10-01"
+          nVisit: "Sat Oct 01 2022"
         },
         {
             id: 2,
@@ -33,18 +33,18 @@ symp: { cough: false, cold: false, stomachache: false, headache: false },
             pres: [
               {
                 txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                visitDt: "2019-01-05"
+                visitDt: "Tue Jan 05 2019"
               },
               {
                 txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                visitDt: "2020-02-01"
+                visitDt: "Sun Feb 02 2020"
              },
               {
                   txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                  visitDt: "2022-08-01"
+                  visitDt: "Mon Aug 01 2022"
               }
             ],
-            nVisit: "2023-09-01"
+            nVisit: "Fri Sep 01 2023"
         },
         {
             id: 3,
@@ -57,26 +57,26 @@ symp: { cough: false, cold: false, stomachache: false, headache: false },
             pres: [
               {
                 txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                visitDt: "2020-08-06"
+                visitDt: "Thu Aug 06 2020"
               },
               {
                   txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                  visitDt: "2021-02-01"
+                  visitDt: "Mon Feb 01 2021"
               },
               {
                 txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                visitDt: "2021-06-01"
+                visitDt: "Tue Jun 01 2021"
             },
             {
                 txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                visitDt: "2022-01-01"
+                visitDt: "Sat Jan 01 2022"
             },
             {
                 txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                visitDt: "2022-05-01"
+                visitDt: "Sun May 01 2022"
             }
             ],
-            nVisit: "2022-09-01"
+            nVisit: "Thu Dec 01 2022"
             
         }
       ]
@@ -93,10 +93,14 @@ export const patientSlice = createSlice({
     deletePatient: (state) => {
       state.patients = state.patients.pop()
     },
+    addPresNew: (state,action) => {
+      let i = state.patients.findIndex(obj=>obj.id===action.payload.id);
+      state.patients[i] = action.payload;
+    }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { addPatient, deletePatient } = patientSlice.actions
+export const { addPatient, deletePatient, addPresNew } = patientSlice.actions
 
 export default patientSlice.reducer
